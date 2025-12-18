@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 CELEBRITY 💙✨</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:linear-gradient(-45deg,#000428,#004e92,#240046,#3c096c);
+  background-size:400% 400%;
+  animation:bgMove 12s ease infinite;
+  color:white;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.card{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(18px);
+  border-radius:25px;
+  padding:28px 24px;
+  width:100%;
+  max-width:420px;
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
+  text-align:center;
+}
+
+h2{
+  font-size:28px;
+  text-shadow:0 0 15px #00e5ff;
+}
+
+p{
+  font-size:17px;
+  margin-bottom:18px;
+}
+
+button{
+  padding:14px 42px;
+  font-size:18px;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(45deg,#ff4081,#ff1744);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 0 25px #ff4081;
+}
+
+#countdown{
+  font-size:80px;
+  font-weight:bold;
+  margin-top:20px;
+  text-shadow:0 0 25px #ffd700;
+}
+
+video{
+  display:none;
+  width:100%;
+  margin-top:18px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(0,0,0,0.8);
+}
+
+#surpriseBox{display:none;margin-top:20px}
+
+/* FINAL LETTER PAGE */
+#finalPage{
+  display:none;
+  position:fixed;
+  inset:0;
+  justify-content:center;
+  align-items:center;
+  padding:15px;
+  z-index:10;
+  overflow-y:auto;
+}
+
+.finalCard{
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(22px);
+  border-radius:25px;
+  padding:26px;
+  max-width:520px;
+  width:100%;
+  max-height:90vh;
+  overflow-y:auto;
+  box-shadow:0 0 50px rgba(0,0,0,0.7);
+  animation:fadeIn 1.6s ease;
+}
+
+.finalText{
+  font-size:16px;
+  line-height:1.85;
+  text-align:left;
+}
+
+.finalText p{margin-bottom:14px}
+
+.highlight{color:#ffd700}
+
+.signature{
+  text-align:right;
+  margin-top:22px;
+  font-style:italic;
+  color:#ffd6ff;
+}
+
+/* THANK YOU PAGE */
+#thankYouPage{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:20;
+}
+
+#thankYouPage h1{
+  font-size:30px;
+  color:white;
+  text-shadow:0 0 20px #00e5ff;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(35px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🎉 Welcome Celebrity 🎉</h2>
+  <p>✨ Today isn’t just a day, it’s a celebration of YOU ✨</p>
+
+  <button id="startBtn" onclick="startCountdown()">Start Celebration 🎊</button>
+  <div id="countdown"></div>
+
+  <video id="video1" playsinline controls>
+    <source src="minnalvala.mp4" type="video/mp4">
+  </video>
+
+  <div id="surpriseBox">
+    <h2>🎁 Surprise 🎁</h2>
+    <p>💖 Please Touch This Button 💖</p>
+    <button onclick="playSecondVideo()">Touch Me ✨</button>
+  </div>
+
+  <video id="video2" playsinline controls>
+    <source src="suprise.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- FINAL LETTER -->
+<div id="finalPage">
+  <div class="finalCard">
+    <h2>💙 Anbulla Punnagai Arasi 💙</h2>
+
+    <div class="finalText">
+      <p>Anbulla Punnagai Arasi avangalukku ❤,</p>
+
+      <p>
+        Indha ulagam konjam azhaga theriyudhu na,
+        adhu <span class="highlight">un punnagai</span> nala thaan nu sollalaam 😊  
+        Neenga pesura sila vaarthaigal,
+        sirikkira andha nodigal ellam
+        yaaro orutharoda naalaye
+        <span class="highlight">full happy</span>
+        aakkidum magic maadhiri ✨
+      </p>
+
+      <p>
+        Unga life la irukkura ella naalum
+        indha birthday maadhiriye
+        <span class="highlight">sirippu, santhosham, success</span>
+        nu neranji irukkanum 🎂💫
+      </p>
+
+      <p>
+        Neenga eppavume indha innocent heart-oda,
+        pure soul-oda,
+        ellarukum nalladhe ninaikkura
+        alagaana manasu-oda
+        irukkanum 💖
+      </p>
+
+      <p>
+        Indha varusham ungaluku pudicha ellam nadakkanum,
+        kanavu ellam reality aaganum,
+        unga punnagai
+        <span class="highlight">eppavum fade aagaama</span>
+        irukkanum nu
+        manasara wish pannren 🤍
+      </p>
+
+      <p>
+        <span class="highlight">Happy Birthday</span>
+        to the most beautiful celebrity 💎 🎉🎈<br>
+        Eppavume sirichite irunga…  
+        adhu podhum,
+        ulagame unga pakkam vandhudum 😌✨
+      </p>
+    </div>
+
+    <div class="signature">
+      Ippadikku,<br>
+      Ungal fan 💙✨
+    </div>
+  </div>
+</div>
+
+<!-- THANK YOU -->
+<div id="thankYouPage">
+  <h1>Thanks for watching Celebrity 💙✨</h1>
+</div>
+
+<!-- BGM -->
+<audio id="bgMusic" preload="auto" playsinline>
+  <source src="bgm.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function startCountdown(){
+  let count=5;
+  const cd=document.getElementById("countdown");
+  const v1=document.getElementById("video1");
+  document.getElementById("startBtn").style.display="none";
+  cd.innerText=count;
+
+  const t=setInterval(()=>{
+    count--;
+    if(count>0) cd.innerText=count;
+    else{
+      clearInterval(t);
+      cd.style.display="none";
+      v1.style.display="block";
+      v1.play();
+    }
+  },1000);
+
+  v1.onended=()=>{
+    v1.style.display="none";
+    document.getElementById("surpriseBox").style.display="block";
+  }
+}
+
+function playSecondVideo(){
+  const v2=document.getElementById("video2");
+  document.getElementById("surpriseBox").style.display="none";
+  v2.style.display="block";
+  v2.play();
+
+  v2.onended=()=>{
+    v2.style.display="none";
+    document.getElementById("finalPage").style.display="flex";
+
+    const music=document.getElementById("bgMusic");
+    music.volume=0.85;
+    setTimeout(()=>{music.play().catch(()=>{})},300);
+
+    setTimeout(()=>{
+      music.pause();
+      music.currentTime=0;
+      document.getElementById("finalPage").style.display="none";
+      document.getElementById("thankYouPage").style.display="flex";
+    },28000);
+  }
+}
+</script>
+
+</body>
+</html>
